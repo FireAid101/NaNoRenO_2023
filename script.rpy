@@ -5,7 +5,6 @@
 
 define e = Character("Eileen")
 
-
 # The game starts here.
 
 label start:
@@ -24,10 +23,15 @@ label start:
 
     # These display lines of dialogue.
 
+    $ renpy.notify("She will remember that!")
+
     e "You've created a new Ren'Py game."
 
     e "Once you add a story, pictures, and music, you can release it to the world!"
 
-    # This ends the game.
+    menu:
+        "Hi":
+            jump start
 
+    # This ends the game.
     return
