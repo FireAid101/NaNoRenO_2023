@@ -12,8 +12,10 @@
 ##
 ## The _() surrounding the string marks it as eligible for translation.
 
-define config.name = _("NaNoReno 2023")
+define config.name = _("The 3 a.m Bus")
 
+define config.allow_skipping = False
+define config.rollback_enabled = False
 
 ## Determines if the title given above is shown on the main menu screen. Set
 ## this to False to hide the title.
@@ -23,7 +25,7 @@ define gui.show_name = True
 
 ## The version of the game.
 
-define config.version = "In-Development!"
+define config.version = "NaNoReno Version"
 
 
 ## Text that is placed on the game's about screen. Place the text between the
@@ -37,7 +39,7 @@ define gui.about = _p("""
 ## distribution. This must be ASCII-only, and must not contain spaces, colons,
 ## or semicolons.
 
-define build.name = "NaNoReno2023"
+define build.name = "The_3am_Bus"
 
 
 ## Sounds and music ############################################################
@@ -62,7 +64,7 @@ define config.has_voice = True
 ## the player is at the main menu. This file will continue playing into the
 ## game, until it is stopped or another file is played.
 
-# define config.main_menu_music = "main-menu-theme.ogg"
+define config.main_menu_music = "audio/NaNoReNo_Menu.ogg"
 
 
 ## Transitions #################################################################
@@ -120,7 +122,7 @@ define config.window_hide_transition = Dissolve(.2)
 ## Controls the default text speed. The default, 0, is infinite, while any other
 ## number is the number of characters per second to type out.
 
-default preferences.text_cps = 0
+default preferences.text_cps = 20
 
 
 ## The default auto-forward delay. Larger numbers lead to longer waits, with 0

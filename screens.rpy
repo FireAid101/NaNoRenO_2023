@@ -249,23 +249,13 @@ screen quick_menu():
             xalign 0.5
             yalign 1.0
 
-            textbutton _("Back") action Rollback()
-            textbutton _("History") action ShowMenu('history')
-            textbutton _("Skip") action Skip() alternate Skip(fast=True, confirm=True)
-            textbutton _("Auto") action Preference("auto-forward", "toggle")
-            textbutton _("Save") action ShowMenu('save')
-            textbutton _("Q.Save") action QuickSave()
-            textbutton _("Q.Load") action QuickLoad()
-            textbutton _("Prefs") action ShowMenu('preferences')
-
 
 ## This code ensures that the quick_menu screen is displayed in-game, whenever
 ## the player has not explicitly hidden the interface.
 init python:
     config.overlay_screens.append("quick_menu")
 
-default quick_menu = True
-
+default quick_menu = False
 style quick_button is default
 style quick_button_text is button_text
 
@@ -552,10 +542,16 @@ screen about():
                 text "[gui.about!t]\n"
 
             label "Made by:"
-            text _("Red Ruby - Artist and writer")
-            text _("Retro Knight - Artist and writer")
-            text _("LesReves - Sound and Music Composer")
-            text _("FireAid - Programmer and UI Designer")
+            text _("Red Ruby - Writer & Game Director")
+            text _("Retro Knight - Character Artist & Background Artist")
+            text _("LesReves - Sound & Music Composer")
+            text _("FireAid - Programmer & UI Designer\n")
+
+            label "Special thanks to these artists for their sounds"
+            text _("13FPanska_Sychra_Petr - bus_door_opening.wav")
+            text _("cribbler - Bus leaving busstop")
+            text _("chimerical - Bus door 1.wav\n")
+            label "NOTE ALL LINKS TO THE SOUNDS\nARE IN THE CREDITS AT THE END OF THE GAME"
 
 
 style about_label is gui_label
